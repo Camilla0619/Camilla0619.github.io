@@ -222,6 +222,24 @@
       display: block;
     }
 
+    .hero-contact-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-contact-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text3);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .hero-contact-link:hover { color: var(--accent2); }
+
     .hero-lead {
       font-size: 16px;
       color: var(--text2);
@@ -796,6 +814,45 @@
       flex-wrap: wrap;
     }
 
+    .hero-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .pillar {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1rem;
+      align-items: start;
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .pillar:last-child { border-bottom: none; }
+    .pillar:hover { background: var(--surface); }
+
+    .pillar-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent2);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-top: 3px;
+    }
+
+    .pillar p {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.6;
+      margin: 0;
+    }
+
     /* ─── Animations ─── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -862,18 +919,28 @@
     <div class="container">
       <div class="hero-inner">
         <div>
-          <p class="hero-eyebrow fade-up">Web3 Growth · AI-Augmented Ops · EN/ZH</p>
           <h1 class="fade-up delay-1">Jing Zhu<span class="name-alt">Kaemi</span></h1>
-          <p class="hero-lead fade-up delay-2">Web3 Operations &amp; Growth professional specializing in crafting brand cultures and scaling ecosystems. Expert in CN-market activation and leading tactical go-to-market campaigns, with a proven milestone of driving a DeFi ecosystem from 0 to 150K users through community narrative building. Shaper of distinct brand cultures, seamlessly integrating AI tools into workflows for high-efficiency content production and sentiment triage. Leverages a technical customer success foundation to execute complex workflows with fluid bilingual (EN/ZH) communication.</p>
-          <div class="bio-chips fade-up delay-3">
-            <span class="chip">Asia Time Zone</span>
-            <span class="chip">Mandarin Native</span>
-            <span class="chip">Discord / Telegram / X</span>
-            <span class="chip">Remote-friendly</span>
+          <div class="hero-contact-row fade-up delay-2">
+            <a class="hero-contact-link" href="mailto:Kaemi06@proton.me">✉ Kaemi06@proton.me</a>
+            <a class="hero-contact-link" href="https://t.me/kamil_krypto" target="_blank" rel="noreferrer">✈ t.me/kamil_krypto</a>
           </div>
-          <div class="hero-actions fade-up delay-4">
-            <a class="btn btn-primary" href="#work">Case Studies</a>
-            <a class="btn btn-ghost" href="mailto:Kaemi06@proton.me">Contact Me</a>
+          <p class="hero-lead fade-up delay-2">
+            Versatile Web3 Operations &amp; Growth Leader with a proven milestone of driving a DeFi product from 0 to 150K users.<br><br>
+            A unique talent combining macro-marketing strategy, data-driven growth tracking, and hands-on community cultivation to scale ecosystems from inception to high-volume market presence.
+          </p>
+          <div class="hero-pillars fade-up delay-3">
+            <div class="pillar">
+              <span class="pillar-label">Growth</span>
+              <p>Expert in full-funnel user acquisition and ecosystem scaling through localized CN-market activation and strategic web3 go-to-market campaigns.</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-label">Marketing</span>
+              <p>Shaper of distinct brand identity and culture, blending creative storytelling with visual narrative building to establish long-term market authority.</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-label">Community</span>
+              <p>Master of user activation and cross-functional workflow design, seamlessly integrating AI tools to streamline content, manage sentiment triage, and optimize bilingual (EN/ZH) user retention.</p>
+            </div>
           </div>
         </div>
 
