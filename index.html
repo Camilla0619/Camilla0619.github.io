@@ -546,8 +546,13 @@
       position: relative;
     }
 
-    .creative-tile.wide {
+    .creative-tile.span2 {
       grid-column: span 2;
+    }
+
+    .creative-tile.span3 {
+      grid-column: span 3;
+      aspect-ratio: 21/6;
     }
 
     .creative-tile img {
@@ -836,7 +841,7 @@
       .case-grid, .skills-grid { grid-template-columns: 1fr; }
       .case-card.wide { grid-column: span 1; }
       .creative-grid { grid-template-columns: repeat(2, 1fr); }
-      .creative-tile.wide { grid-column: span 2; }
+      .creative-tile.span2, .creative-tile.span3 { grid-column: span 2; aspect-ratio: 16/9; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
   </style>
@@ -1039,21 +1044,31 @@
       </div>
 
       <div class="creative-grid reveal">
-        <figure class="creative-tile wide">
-          <img src="assets/creative/okx%20partnership.jpeg" alt="RouteX × OKX Marketplace partnership campaign">
-          <figcaption><span>RouteX · Campaign</span>OKX Marketplace partnership — NFT launch with 50K+ impressions</figcaption>
+
+        <!-- Row 1: OKX wide + Trading -->
+        <figure class="creative-tile span2">
+          <img src="assets/creative/okx%20partnership.jpeg" alt="RouteX × OKX Marketplace">
+          <figcaption><span>RouteX · Campaign</span>OKX Marketplace partnership — 50K+ impressions</figcaption>
         </figure>
         <figure class="creative-tile">
-          <img src="assets/creative/trading%20campaign.jpeg" alt="RouteX × Movement Special Trade Campaign">
+          <img src="assets/creative/trading%20campaign.jpeg" alt="RouteX × Movement Trade Campaign">
           <figcaption><span>RouteX · Campaign</span>Route-X × Movement Special Trade Campaign</figcaption>
         </figure>
+
+        <!-- Row 2: AMA + Movernance banner wide -->
         <figure class="creative-tile">
-          <img src="assets/creative/ama.jpeg" alt="AMA — Celebrate Movedrop with Route-X">
-          <figcaption><span>RouteX · Event</span>Cross-project AMA — Movedrop with Movement &amp; Colony</figcaption>
+          <img src="assets/creative/ama.jpeg" alt="AMA — Movedrop with Route-X">
+          <figcaption><span>RouteX · Event</span>Cross-project AMA with Movement &amp; Colony</figcaption>
         </figure>
-        <figure class="creative-tile wide">
-          <img src="assets/creative/movernance%20banner.jpeg" alt="Movernance — All in one liquid staking launchpad">
+        <figure class="creative-tile span2">
+          <img src="assets/creative/movernance%20banner.jpeg" alt="Movernance — liquid staking launchpad">
           <figcaption><span>Movernance · Brand</span>Product launch banner — liquid staking launchpad</figcaption>
+        </figure>
+
+        <!-- Row 3: Movernance product + meme + Mentis banner -->
+        <figure class="creative-tile">
+          <img src="assets/creative/movernance%20product.jpeg" alt="Movernance product">
+          <figcaption><span>Movernance · Product</span>Product UI visual</figcaption>
         </figure>
         <figure class="creative-tile">
           <img src="assets/creative/movernance%20meme.jpeg" alt="Movernance capybara meme">
@@ -1063,6 +1078,13 @@
           <img src="assets/creative/mentis%20banner.jpeg" alt="Mentis — Your Onchain Intelligence Layer">
           <figcaption><span>Mentis · Brand</span>0-to-1 brand identity — Backed by IOBC</figcaption>
         </figure>
+
+        <!-- Row 4: Mentis meme full width -->
+        <figure class="creative-tile span3">
+          <img src="assets/creative/mentis%20meme.jpeg" alt="Mentis meme">
+          <figcaption><span>Mentis · Creative</span>Brand culture content</figcaption>
+        </figure>
+
       </div>
     </div>
   </section>
