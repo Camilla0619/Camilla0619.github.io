@@ -895,6 +895,31 @@
       .creative-tile.ratio-portrait { aspect-ratio: 16/9; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
+    /* ─── Print / PDF ─── */
+    @media print {
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { background: #0a0a0b !important; }
+      body::before, body::after { display: none; }
+      nav, footer, .hero-glow, .hero-glow2, .contact-glow, .creative-links, .section-eyebrow { display: none !important; }
+      .fade-up, .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+      section, .section-pad { padding: 2rem 0 !important; }
+      .hero { min-height: unset !important; padding: 2rem 0 !important; }
+      .hero-inner { grid-template-columns: 1fr 320px !important; gap: 2rem !important; }
+      .container { padding: 0 2rem !important; }
+      .case-grid { grid-template-columns: 1fr !important; }
+      .case-card.wide { grid-column: span 1 !important; }
+      .case-thumb { aspect-ratio: 16/6 !important; }
+      .case-card.wide .case-thumb { aspect-ratio: 16/5 !important; }
+      .creative-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .creative-tile.ratio-169 { aspect-ratio: 16/9 !important; }
+      .creative-tile.ratio-21  { aspect-ratio: 2/1 !important; }
+      .creative-tile.ratio-portrait { aspect-ratio: 4/5 !important; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      h2 { font-size: 24px !important; margin-bottom: 1.5rem !important; }
+      .divider { margin: 0 !important; }
+      .contact-section { padding: 2rem 0 !important; }
+      a { color: inherit !important; }
+    }
   </style>
 </head>
 <body>
