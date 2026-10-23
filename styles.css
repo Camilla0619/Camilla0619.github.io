@@ -132,3 +132,35 @@ body.dark .ink-mark::after{filter:brightness(1.25)}
 
 .kaemi-guide{right:43px}.home-contact>div{gap:18px}.home-contact .contact-icon{display:inline-flex;width:26px;height:28px;align-items:center;justify-content:center;color:var(--muted)}.contact-icon svg{width:19px;height:19px}.home-contact .contact-icon:hover{color:var(--ink)}#little-mood{min-width:205px;display:inline-block}
 @media(max-width:700px){.kaemi-guide{right:34px}}
+
+.home-name-line{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:22px}.home-name-line .name-mark{margin:0}.home-name-line .home-role{margin:0;font-size:19px;white-space:nowrap;letter-spacing:-.03em}
+@media(max-width:600px){.home-name-line{gap:12px}.home-name-line .home-role{font-size:16px}}
+
+.home-position{font:11px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.045em;color:var(--ink);margin:0 0 25px}.home-position>span{display:block}.home-position>span+span{color:var(--muted);font-size:10px}.home-facts{margin-top:28px;font:10px/1.8 ui-monospace,monospace;color:var(--muted)}.home-weather{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:7px}.weather-credit{text-decoration:none;opacity:.55}.home-facts #little-mood{border:0;background:none;padding:0;color:inherit;font:inherit;text-align:left;cursor:pointer}.home-signoff{margin:23px 0 0;font-size:10px}.homepage .home-main{padding-bottom:45px}
+
+.home-position{font-size:15px;line-height:1.65;letter-spacing:.04em;margin:0 0 25px;font-weight:550}.home-position>span+span{font-size:12px;color:var(--ink);font-weight:400;letter-spacing:.025em;margin-top:3px}
+@media(max-width:600px){.home-position{font-size:14px}.home-position>span+span{font-size:11px}}
+
+.home-bio .prose-link{color:var(--ink);text-decoration-color:#b367ef;text-decoration-thickness:2px;text-underline-offset:4px}.home-bio .prose-link:hover{color:var(--accent)}.kaemi-panel{width:235px;padding:21px}.guide-heading h2{font-size:23px;margin:0}.guide-shortcuts{display:flex;flex-direction:column;align-items:stretch;gap:0;margin-top:14px}.guide-shortcuts a{display:flex;justify-content:space-between;gap:25px;padding:9px 0;font-size:14px;text-decoration:none}.guide-shortcuts a span{color:var(--muted)}.kaemi-launcher{overflow:visible;position:relative}.kaemi-launcher img{border-radius:50%;transform:none}.kaemi-launcher::after{content:'';position:absolute;inset:-5px;border:1px solid #b367ef;border-radius:50%;opacity:0;pointer-events:none;animation:guide-nudge 12s 3s infinite}.kaemi-launcher[aria-expanded=true]::after{animation:none;opacity:0}@keyframes guide-nudge{0%,22%,100%{opacity:0;transform:scale(1)}3%,13%{opacity:.55;transform:scale(1)}10%,20%{opacity:0;transform:scale(1.28)}}@media(prefers-reduced-motion:reduce){.kaemi-launcher::after{animation:none}}
+
+.home-bio .prose-link{text-decoration:none;white-space:nowrap}.home-bio .prose-link .ink-mark{color:inherit}.prose-arrow{font-size:.85em;display:inline-block;color:var(--muted)}.home-bio .prose-link:hover .prose-arrow{color:var(--accent)}
+
+.kaemi-panel{width:215px;padding:18px 20px;border-radius:11px;box-shadow:0 5px 22px #191a210c;border-color:var(--line)}.guide-heading{align-items:center}.guide-heading h2{font:400 13px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.06em;color:var(--muted);margin:0}.guide-heading h2 span{margin-left:3px;font-size:14px;color:#b58b56}.guide-close{font-size:18px;width:20px;height:22px;opacity:.6}.guide-shortcuts{margin-top:12px}.guide-shortcuts a{font-size:13px;padding:8px 0;font-weight:400}.guide-shortcuts a span{font-size:12px;opacity:.7}
+
+/* A small constellation of handwritten routes around Kaemi. */
+.kaemi-panel{width:235px;height:215px;right:0;bottom:70px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible;max-height:none}
+.kaemi-panel .guide-heading{position:absolute;right:5px;bottom:4px;display:block;transform:rotate(5deg)}
+.kaemi-panel .guide-heading h2{font-size:16px;letter-spacing:.02em;color:var(--ink);font-weight:400;background:var(--bg);border-radius:50%;padding:7px 12px}
+.kaemi-panel .guide-close{display:none}
+.kaemi-panel .guide-shortcuts{position:absolute;inset:0;display:block;margin:0}
+.kaemi-panel .guide-shortcuts a{position:absolute;display:inline-flex;align-items:baseline;gap:10px;width:max-content;padding:7px 10px;font-size:14px;color:var(--ink);background:var(--bg);border-radius:45%;isolation:isolate;animation:route-appear .25s ease-out both}
+.kaemi-panel .guide-shortcuts a::after{content:'';position:absolute;left:9px;right:27px;bottom:2px;height:8px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M3 8C24 3 42 9 64 6S98 3 117 5M9 10C41 7 70 10 109 7' fill='none' stroke='%23b367ef' stroke-width='2.3' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.kaemi-panel .guide-shortcuts a:nth-child(1){left:12px;top:123px;rotate:-8deg}
+.kaemi-panel .guide-shortcuts a:nth-child(2){left:5px;top:62px;rotate:-3deg;animation-delay:.045s}
+.kaemi-panel .guide-shortcuts a:nth-child(3){right:0;top:12px;rotate:5deg;animation-delay:.09s}
+.kaemi-panel .guide-shortcuts a:hover{color:var(--accent)}.kaemi-panel .guide-shortcuts a span{opacity:1}
+@keyframes route-appear{from{opacity:0;transform:translate(8px,9px)}to{opacity:1;transform:translate(0,0)}}
+@media(max-width:600px){.kaemi-panel{width:215px;height:205px}.kaemi-panel .guide-shortcuts a{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.kaemi-panel .guide-shortcuts a{animation:none}}
+
+.kaemi-panel .guide-close{display:block;position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);padding:0}.kaemi-panel .guide-close:focus-visible{clip-path:none;overflow:visible;width:25px;height:25px;right:-22px;top:6px;background:var(--bg)}

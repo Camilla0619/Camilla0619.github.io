@@ -62,3 +62,37 @@ if(moodButton){
  moodButton.addEventListener('click',nextMood);
  setInterval(()=>{if(!document.hidden && !moodButton.matches(':hover, :focus'))nextMood();},4500);
 }
+
+// Current Beijing conditions; no visitor location is requested.
+(() => {
+ const label=document.querySelector('#beijing-weather');
+ if(!label)return;
+ const icon=document.querySelector('#weather-icon');
+ const describe=(code,day)=>{
+  if(code===0)return [day?'☀':'☾','Clear'];
+  if(code<=2)return ['⛅','Partly cloudy'];
+  if(code===3)return ['☁','Overcast'];
+  if(code<=48)return ['≋','Fog'];
+  if(code<=67)return ['☂','Rain'];
+  if(code<=77)return ['❄','Snow'];
+  if(code<=82)return ['☂','Showers'];
+  if(code<=86)return ['❄','Snow showers'];
+  return ['ϟ','Thunderstorm'];
+ };
+ let lastSuccess=0;
+ async function updateWeather(){
+  try{
+   const response=await fetch('https://api.open-meteo.com/v1/forecast?latitude=39.9042&longitude=116.4074&current=temperature_2m,weather_code,is_day&timezone=Asia%2FShanghai',{signal:AbortSignal.timeout(10000)});
+   if(!response.ok)throw new Error('Weather unavailable');
+   const data=await response.json();const c=data.current;
+   if(!c || !Number.isFinite(c.temperature_2m) || !Number.isFinite(c.weather_code))throw new Error('Invalid weather');
+   const [symbol,condition]=describe(c.weather_code,c.is_day);
+   icon.textContent=symbol;label.textContent=Math.round(c.temperature_2m)+'°C · '+condition;
+   lastSuccess=Date.now();label.title='Beijing conditions · '+c.time.replace('T',' ')+' (UTC+8)';
+  }catch{
+   if(!lastSuccess || Date.now()-lastSuccess>1800000){label.textContent='Weather unavailable';icon.textContent='◌';}
+  }
+ }
+ updateWeather();setInterval(()=>{if(!document.hidden)updateWeather();},600000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden && Date.now()-lastSuccess>600000)updateWeather();});
+})();
