@@ -49,5 +49,16 @@ wardrobeToggle?.addEventListener('click', () => {
  wardrobeToggle.textContent=open?'Less, please ↙':'Play dress-up ↗';
 });
 const moodButton=document.querySelector('#little-mood');
-const littleMoods=['☕ probably having coffee','🐈 quality time with 涞涞','✳ one more little idea','🥊 see you after training'];let moodIndex=0;
-moodButton?.addEventListener('click',()=>{moodIndex=(moodIndex+1)%littleMoods.length;moodButton.textContent=littleMoods[moodIndex];});
+const littleMoods=['☕ probably having coffee','🌧 probably raining','🐈 probably petting lailai'];
+let moodIndex=0;
+if(moodButton){
+ const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+ moodButton.setAttribute('aria-label','Current mood. Click to change.');
+ const nextMood=()=>{
+  moodIndex=(moodIndex+1)%littleMoods.length;
+  moodButton.textContent=littleMoods[moodIndex];
+  if(!reducedMotion.matches)moodButton.animate([{opacity:0,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:380,easing:'ease-out'});
+ };
+ moodButton.addEventListener('click',nextMood);
+ setInterval(()=>{if(!document.hidden && !moodButton.matches(':hover, :focus'))nextMood();},4500);
+}
