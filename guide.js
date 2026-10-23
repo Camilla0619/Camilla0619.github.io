@@ -9,7 +9,7 @@
   about: ["I work across growth, community, and creative work in tech. I've built an X audience from zero to 150K, and I like helping early-stage teams find their starting point.", [['Meet Kaemi ↗','index.html']]],
   work: ["Explore campaign strategy, community identity, launch storytelling, and things I've built with AI.", [['RouteX campaigns ↗','work.html#routex'],['Websites & video ↗','work.html#deepchatbi'],['Rabble Revolution ↗','work.html#rabble']]],
   experience: ["My background spans enterprise technology, crypto, and AI, with roles across growth strategy, creator partnerships, community, and product marketing.", [['Read Experience ↗','cv.html']]],
-  contact: ["Open to remote work with a small, early-stage team. You can reach me by email or connect on LinkedIn.", [['Email ↗','mailto:Kaemi06@proton.me'],['LinkedIn ↗','https://www.linkedin.com/in/jing-zhu-137a18a4/']]]
+  contact: ["Open to remote work with a small, early-stage team. You can reach me by email, LinkedIn, or Telegram.", [['Kaemi06@proton.me ↗','mailto:Kaemi06@proton.me'],['LinkedIn ↗','https://www.linkedin.com/in/jing-zhu-137a18a4/'],['Telegram ↗','https://t.me/kamil_krypto']]]
  };
  function setOpen(open, restore = false) {
   panel.hidden = !open; launcher.setAttribute('aria-expanded',String(open));
