@@ -164,3 +164,8 @@ body.dark .ink-mark::after{filter:brightness(1.25)}
 @media(prefers-reduced-motion:reduce){.kaemi-panel .guide-shortcuts a{animation:none}}
 
 .kaemi-panel .guide-close{display:block;position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);padding:0}.kaemi-panel .guide-close:focus-visible{clip-path:none;overflow:visible;width:25px;height:25px;right:-22px;top:6px;background:var(--bg)}
+
+/* Kaemi's original signature, rendered in the current text color. */
+.home-header .signature-mark{display:inline-flex;width:112px;height:40px;align-items:center;justify-content:center}.home-header .signature-mark .signature-art{display:block;width:112px;height:40px;margin:0;background:var(--ink);border-radius:0;-webkit-mask:url('assets/kaemi-signature.png') center/142% auto no-repeat;mask:url('assets/kaemi-signature.png') center/142% auto no-repeat}.home-header .signature-mark:hover .signature-art{background:var(--accent)}
+
+.subpage header .signature-mark{display:inline-flex;width:112px;height:40px;align-items:center;justify-content:center;flex-shrink:0}.subpage header .signature-mark .signature-art{display:block;width:112px;height:40px;margin:0;background:var(--ink);border-radius:0;-webkit-mask:url('assets/kaemi-signature.png') center/142% auto no-repeat;mask:url('assets/kaemi-signature.png') center/142% auto no-repeat}.subpage header .signature-mark:hover .signature-art{background:var(--accent)}
